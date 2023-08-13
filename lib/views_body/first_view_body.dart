@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mataam_app/constant.dart';
 import 'package:mataam_app/widgets/custom_button.dart';
+import 'package:mataam_app/widgets/login_sheet.dart';
 import 'package:mataam_app/widgets/register_sheet.dart';
 
 class FirstViewBody extends StatelessWidget {
@@ -38,6 +39,7 @@ class FirstViewBody extends StatelessWidget {
             colortext: Colors.white,
             onTap: (){
               showModalBottomSheet(
+                backgroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(36),topRight: Radius.circular(36))
                 ),
@@ -62,7 +64,20 @@ class FirstViewBody extends StatelessWidget {
             color: Color(0xffD1FAE5),
             colortext: Color(0xff10B981),
             onTap: () {
-              
+              showModalBottomSheet(
+                backgroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(36),topRight: Radius.circular(36))
+                ),
+                isScrollControlled: true,
+                context: context,
+                builder: (context){
+                  return SingleChildScrollView(child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 24),
+                    child: LoginSheet(),
+                  ),);
+                } 
+                );
             },
           ),
         ],
