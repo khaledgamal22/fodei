@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mataam_app/core/utilits/app_routes.dart';
 
 import '../../../../../constant.dart';
 import 'custom_button.dart';
@@ -53,7 +55,9 @@ class LoginSheet extends StatelessWidget {
               height: 50,
             ),
             CustomButton(
-                title: 'Login', color: kPrimaryColor, colortext: Colors.white),
+                title: 'Login', color: kPrimaryColor, colortext: Colors.white,onTap: (){
+                  GoRouter.of(context).push(AppRoute.kHomeId);
+                },),
             Divider(
               color: Colors.grey,
               indent: 70,

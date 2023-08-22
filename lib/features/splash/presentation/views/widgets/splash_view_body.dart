@@ -15,7 +15,7 @@ class SplashViewBody extends StatelessWidget {
         children: [
           Image.asset(
             'assets/images/food-app-icon-12.jpg',
-            height: 200,
+            height: MediaQuery.of(context).size.height*0.25,
           ),
           SizedBox(
             height: 50,
@@ -28,8 +28,9 @@ class SplashViewBody extends StatelessWidget {
             height: 20,
           ),
           Text(
-              'By enjoying Foodmedia Services Please Register First',
-            ),
+            'By enjoying Foodmedia Services',
+          ),
+          Text('Please Register first'),
           SizedBox(
             height: 70,
           ),
@@ -37,24 +38,24 @@ class SplashViewBody extends StatelessWidget {
             title: 'Create Account',
             color: kPrimaryColor,
             colortext: Colors.white,
-            onTap: (){
+            onTap: () {
               showModalBottomSheet(
-                backgroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(36),topRight: Radius.circular(36))
-                ),
-                isScrollControlled: true,
-                context: context,
-                builder: (context){
-                  return SingleChildScrollView(child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 24),
-                    child: RegisterSheet(),
-                  ),);
-                } 
-                );
+                  backgroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(36),
+                          topRight: Radius.circular(36))),
+                  isScrollControlled: true,
+                  context: context,
+                  builder: (context) {
+                    return SingleChildScrollView(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 24),
+                        child: RegisterSheet(),
+                      ),
+                    );
+                  });
             },
-             
-              
           ),
           SizedBox(
             height: 10,
@@ -65,19 +66,21 @@ class SplashViewBody extends StatelessWidget {
             colortext: Color(0xff10B981),
             onTap: () {
               showModalBottomSheet(
-                backgroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(36),topRight: Radius.circular(36))
-                ),
-                isScrollControlled: true,
-                context: context,
-                builder: (context){
-                  return SingleChildScrollView(child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 24),
-                    child: LoginSheet(),
-                  ),);
-                } 
-                );
+                  backgroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(36),
+                          topRight: Radius.circular(36))),
+                  isScrollControlled: true,
+                  context: context,
+                  builder: (context) {
+                    return SingleChildScrollView(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 24),
+                        child: LoginSheet(),
+                      ),
+                    );
+                  });
             },
           ),
         ],

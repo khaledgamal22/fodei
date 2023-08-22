@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mataam_app/core/utilits/app_routes.dart';
 
 void main(){
-  runApp(MataamApp());
+  runApp(const MataamApp());
 }
 
 class MataamApp extends StatelessWidget {
