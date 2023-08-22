@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mataam_app/constant.dart';
-import 'package:mataam_app/widgets/custom_button.dart';
-import 'package:mataam_app/widgets/custom_textfeild.dart';
+import 'package:mataam_app/features/splash/presentation/views/widgets/custom_button.dart';
+import 'package:mataam_app/features/splash/presentation/views/widgets/custom_textfeild.dart';
 
 import 'custom_google_button.dart';
 

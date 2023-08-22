@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mataam_app/views/first_view.dart';
+import 'package:mataam_app/core/utilits/app_routes.dart';
 
 void main(){
   runApp(MataamApp());
@@ -10,9 +10,9 @@ class MataamApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: FirstView(),
+     routerConfig: AppRoute.router,
     );
   }
 }

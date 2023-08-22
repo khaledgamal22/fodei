@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constant.dart';
+import '../../../../../constant.dart';
 import 'custom_button.dart';
 import 'custom_google_button.dart';
 import 'custom_textfeild.dart';

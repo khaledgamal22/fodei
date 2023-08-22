@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mataam_app/constant.dart';
-import 'package:mataam_app/widgets/custom_button.dart';
-import 'package:mataam_app/widgets/login_sheet.dart';
-import 'package:mataam_app/widgets/register_sheet.dart';
+import 'package:mataam_app/features/splash/presentation/views/widgets/custom_button.dart';
+import 'package:mataam_app/features/splash/presentation/views/widgets/login_sheet.dart';
+import 'package:mataam_app/features/splash/presentation/views/widgets/register_sheet.dart';
 
-class FirstViewBody extends StatelessWidget {
-  const FirstViewBody({super.key});
+class SplashViewBody extends StatelessWidget {
+  const SplashViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
