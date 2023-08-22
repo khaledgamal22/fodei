@@ -42,11 +42,16 @@ class LoginSheet extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text(
-                  'Forget Password?',
-                  style: TextStyle(
-                    color: kPrimaryColor,
-                    fontSize: 18,
+                GestureDetector(
+                  onTap: () {
+                    GoRouter.of(context).push(AppRoute.kForgetpass);
+                  },
+                  child: Text(
+                    'Forget Password?',
+                    style: TextStyle(
+                      color: kPrimaryColor,
+                      fontSize: 18,
+                    ),
                   ),
                 )
               ],
