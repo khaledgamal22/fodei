@@ -16,7 +16,7 @@ class ForgetPassViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: height*0.06,),
+          SizedBox(height: 50,),
           Text(
             'Forget Password',
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
