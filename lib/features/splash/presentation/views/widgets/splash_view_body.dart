@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mataam_app/constant.dart';
+import 'package:mataam_app/core/utilits/service_locator.dart';
+import 'package:mataam_app/features/splash/data/repos/splash_repo_implementation.dart';
+import 'package:mataam_app/features/splash/presentation/view_models/login_cubit/login_cubit.dart';
 import 'package:mataam_app/features/splash/presentation/views/widgets/custom_button.dart';
 import 'package:mataam_app/features/splash/presentation/views/widgets/login_sheet.dart';
 import 'package:mataam_app/features/splash/presentation/views/widgets/register_sheet.dart';
@@ -15,7 +19,7 @@ class SplashViewBody extends StatelessWidget {
         children: [
           Image.asset(
             'assets/images/food-app-icon-12.jpg',
-            height: MediaQuery.of(context).size.height*0.25,
+            height: MediaQuery.of(context).size.height * 0.25,
           ),
           SizedBox(
             height: 50,
@@ -77,7 +81,12 @@ class SplashViewBody extends StatelessWidget {
                     return SingleChildScrollView(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 24),
-                        child: LoginSheet(),
+                        child: BlocProvider(
+                          create: (context) => LoginCubit(
+                            SplashRepoImplementation(),
+                          ),
+                          child: LoginSheet(),
+                        ),
                       ),
                     );
                   });

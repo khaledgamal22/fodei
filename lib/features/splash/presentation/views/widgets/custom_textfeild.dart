@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:mataam_app/constant.dart';
 
 class CustomTextFeild extends StatelessWidget {
-  const CustomTextFeild({super.key, required this.hint, required this.header});
+  const CustomTextFeild({super.key, required this.hint, required this.header,this.onChanged,});
   final String hint;
   final String header;
+  final void Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class CustomTextFeild extends StatelessWidget {
         Text(header,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
         SizedBox(height: 5,),
         TextField(
+          onChanged: onChanged,
           decoration: InputDecoration(
             hintText: hint,
             enabledBorder: OutlineInputBorder(

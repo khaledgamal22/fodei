@@ -4,7 +4,7 @@ import 'package:mataam_app/core/errors/failure.dart';
 import 'package:mataam_app/features/splash/data/repos/splash_repo.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class SplashRepoimplementation implements SplashRepo {
+class SplashRepoImplementation implements SplashRepo {
   @override
   Future<Either<Failure, UserCredential>> userLogin({
     required String email,
