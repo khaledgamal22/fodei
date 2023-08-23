@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "149050519458",
+    "project_id": "mataam-app-80855",
+    "storage_bucket": "mataam-app-80855.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149050519458:android:24f8639b666e28b577ccfb",
+        "android_client_info": {
+          "package_name": "com.example.mataam_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149050519458-miilnptf2sr9vrtjukjut47i4i1jj79q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZgLYm5-Vh3Oi9ahr5fuxcbY6boS4oKrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149050519458-dj2bf8e9hpd16ev80kpkr9eld7lg0dft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
