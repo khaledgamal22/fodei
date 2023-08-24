@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:mataam_app/constant.dart';
 
 class CustomTextFeild extends StatelessWidget {
-  const CustomTextFeild({super.key, required this.hint, required this.header,this.onChanged,});
+  const CustomTextFeild({
+    super.key,
+    required this.hint,
+    required this.header,
+    this.onChanged,
+  });
   final String hint;
   final String header;
   final void Function(String)? onChanged;
@@ -12,9 +17,20 @@ class CustomTextFeild extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(header,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
-        SizedBox(height: 5,),
-        TextField(
+        Text(
+          header,
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        TextFormField(
+          validator: (value) {
+            if (value?.isEmpty ?? true) {
+              return 'field is required';
+            }
+            return null;
+          },
           onChanged: onChanged,
           decoration: InputDecoration(
             hintText: hint,

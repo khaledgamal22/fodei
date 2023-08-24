@@ -1,70 +1,51 @@
 import 'package:flutter/material.dart';
-import 'package:mataam_app/constant.dart';
-import 'package:mataam_app/features/splash/presentation/views/widgets/custom_button.dart';
-import 'package:mataam_app/features/splash/presentation/views/widgets/custom_textfeild.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mataam_app/features/splash/presentation/view_models/register_cubit/register_cubit.dart';
+import 'package:mataam_app/features/splash/presentation/views/widgets/register_form.dart';
+import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-import 'custom_google_button.dart';
+import '../../../../../core/utilits/app_routes.dart';
+import '../../../../../core/utilits/functions.dart';
 
 class RegisterSheet extends StatelessWidget {
-  const RegisterSheet({super.key});
+  RegisterSheet({super.key});
+
+  bool isLoading = false;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        left: 16,
-        right: 16,
-        top: 16,
-        bottom: MediaQuery.of(context).viewInsets.bottom,
-      ),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(36),
-        ),
-        child: Column(
-          children: [
-            CustomTextFeild(
-              header: 'Full Name',
-              hint: 'Enter your full name',
+    return BlocConsumer<RegisterCubit, RegisterState>(
+      listener: (context, state) {
+        if (state is RegisterLoading) {
+          isLoading = true;
+        } else if (state is RegisterFailure) {
+          showSnack(context, state.errorMessage);
+          isLoading = false;
+        } else if (state is RegisterSucsees) {
+          isLoading = false;
+          GoRouter.of(context).push(AppRoute.kHomeId);
+        }
+      },
+      builder: (context, state) {
+        return ModalProgressHUD(
+          inAsyncCall: isLoading,
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: 16,
+              right: 16,
+              top: 16,
+              bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
-            SizedBox(
-              height: 50,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(36),
+              ),
+              child: RegisterForm(),
             ),
-            CustomTextFeild(
-              header: 'Email Address',
-              hint: 'Eg nameemail@emailkamue.com',
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            CustomTextFeild(
-              header: 'Password',
-              hint: '**** **** ****',
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            CustomButton(
-                title: 'Register',
-                color: kPrimaryColor,
-                colortext: Colors.white),
-            Divider(
-              color: Colors.grey,
-              indent: 70,
-              endIndent: 70,
-              height: 30,
-            ),
-            CustomGoolgeButton(
-              title: 'Sign up with Google',
-              color: Colors.grey.withOpacity(0.2),
-              colortext: Colors.black,
-            ),
-            SizedBox(
-              height: 20,
-            )
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

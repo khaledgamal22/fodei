@@ -4,6 +4,7 @@ import 'package:mataam_app/constant.dart';
 import 'package:mataam_app/core/utilits/service_locator.dart';
 import 'package:mataam_app/features/splash/data/repos/splash_repo_implementation.dart';
 import 'package:mataam_app/features/splash/presentation/view_models/login_cubit/login_cubit.dart';
+import 'package:mataam_app/features/splash/presentation/view_models/register_cubit/register_cubit.dart';
 import 'package:mataam_app/features/splash/presentation/views/widgets/custom_button.dart';
 import 'package:mataam_app/features/splash/presentation/views/widgets/login_sheet.dart';
 import 'package:mataam_app/features/splash/presentation/views/widgets/register_sheet.dart';
@@ -55,7 +56,12 @@ class SplashViewBody extends StatelessWidget {
                     return SingleChildScrollView(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 24),
-                        child: RegisterSheet(),
+                        child: BlocProvider(
+                          create: (context) => RegisterCubit(
+                            SplashRepoImplementation(),
+                          ),
+                          child: RegisterSheet(),
+                        ),
                       ),
                     );
                   });
