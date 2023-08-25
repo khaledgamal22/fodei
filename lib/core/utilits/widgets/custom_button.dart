@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mataam_app/features/splash/presentation/view_models/login_cubit/login_cubit.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton(
       {super.key,
       required this.title,
       required this.color,
-      required this.colortext,
       this.onTap,
       this.icon});
-  final String title;
+  final Widget title;
   final Color color;
-  final Color colortext;
   final void Function()? onTap;
   final IconData? icon;
 
@@ -20,13 +20,7 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         child: Center(
-          child: Text(
-            title,
-            style: TextStyle(
-              color: colortext,
-              fontSize: 20
-              ),
-          ),
+          child: title
         ),
         width: 256,
         height: 55,
@@ -38,5 +32,7 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
+
+
 
 

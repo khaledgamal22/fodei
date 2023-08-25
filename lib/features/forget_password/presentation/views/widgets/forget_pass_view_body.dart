@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mataam_app/constant.dart';
-import 'package:mataam_app/features/splash/presentation/views/widgets/custom_button.dart';
-import 'package:mataam_app/features/splash/presentation/views/widgets/custom_textfeild.dart';
+import 'package:mataam_app/core/utilits/widgets/custom_button.dart';
+import 'package:mataam_app/core/utilits/widgets/custom_textfeild.dart';
 
 class ForgetPassViewBody extends StatelessWidget {
   const ForgetPassViewBody({super.key});
@@ -63,7 +63,10 @@ class ForgetPassViewBody extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: CustomButton(
-                title: 'Submit', color: kPrimaryColor, colortext: Colors.white),
+                title: Text('Submit',style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),), color: kPrimaryColor,),
           )
         ],
       ),

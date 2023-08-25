@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mataam_app/core/utilits/widgets/custom_circular_indicator.dart';
 
 import '../../../../../constant.dart';
 import '../../view_models/register_cubit/register_cubit.dart';
-import 'custom_button.dart';
+import '../../../../../core/utilits/widgets/custom_button.dart';
 import 'custom_google_button.dart';
-import 'custom_textfeild.dart';
+import '../../../../../core/utilits/widgets/custom_textfeild.dart';
 
 class RegisterForm extends StatefulWidget {
   RegisterForm({super.key});
@@ -69,17 +70,22 @@ class _RegisterFormState extends State<RegisterForm> {
                   email: email!,
                   password: password!,
                 );
+              } else {
+                autovalidateMode = AutovalidateMode.always;
               }
-              else{
-                autovalidateMode=AutovalidateMode.always;
-              }
-              setState(() {
-                
-              });
+              setState(() {});
             },
-            title: 'Register',
+            title:
+                BlocProvider.of<RegisterCubit>(context).state is RegisterLoading
+                    ? CustomCircularIndicator()
+                    : Text(
+                        'Register',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
             color: kPrimaryColor,
-            colortext: Colors.white,
           ),
           Divider(
             color: Colors.grey,

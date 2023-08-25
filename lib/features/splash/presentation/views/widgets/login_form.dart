@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:mataam_app/core/utilits/widgets/custom_circular_indicator.dart';
 
 import '../../../../../constant.dart';
 import '../../../../../core/utilits/app_routes.dart';
 import '../../view_models/login_cubit/login_cubit.dart';
-import 'custom_button.dart';
+import '../../../../../core/utilits/widgets/custom_button.dart';
 import 'custom_google_button.dart';
-import 'custom_textfeild.dart';
+import '../../../../../core/utilits/widgets/custom_textfeild.dart';
 
 class LoginForm extends StatefulWidget {
   LoginForm({super.key});
@@ -72,9 +73,16 @@ class _LoginFormState extends State<LoginForm> {
             height: 50,
           ),
           CustomButton(
-            title: 'Login',
+            title: BlocProvider.of<LoginCubit>(context).state is LoginLoading
+                ? CustomCircularIndicator()
+                : Text(
+                    'Login',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
             color: kPrimaryColor,
-            colortext: Colors.white,
             onTap: () {
               if (formkey.currentState!.validate()) {
                 BlocProvider.of<LoginCubit>(context)
@@ -82,9 +90,7 @@ class _LoginFormState extends State<LoginForm> {
               } else {
                 autovalidateMode = AutovalidateMode.always;
               }
-              setState(() {
-                
-              });
+              setState(() {});
             },
           ),
           Divider(

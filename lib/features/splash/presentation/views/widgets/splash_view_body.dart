@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mataam_app/constant.dart';
-import 'package:mataam_app/core/utilits/service_locator.dart';
 import 'package:mataam_app/features/splash/data/repos/splash_repo_implementation.dart';
 import 'package:mataam_app/features/splash/presentation/view_models/login_cubit/login_cubit.dart';
 import 'package:mataam_app/features/splash/presentation/view_models/register_cubit/register_cubit.dart';
-import 'package:mataam_app/features/splash/presentation/views/widgets/custom_button.dart';
+import 'package:mataam_app/core/utilits/widgets/custom_button.dart';
 import 'package:mataam_app/features/splash/presentation/views/widgets/login_sheet.dart';
 import 'package:mataam_app/features/splash/presentation/views/widgets/register_sheet.dart';
+
+import '../../../../../core/utilits/app_routes.dart';
+import '../../../../../core/utilits/functions.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
@@ -40,9 +43,13 @@ class SplashViewBody extends StatelessWidget {
             height: 70,
           ),
           CustomButton(
-            title: 'Create Account',
+            title: Text('Create Account',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+            ),
+            ),
             color: kPrimaryColor,
-            colortext: Colors.white,
             onTap: () {
               showModalBottomSheet(
                   backgroundColor: Colors.white,
@@ -71,13 +78,17 @@ class SplashViewBody extends StatelessWidget {
             height: 10,
           ),
           CustomButton(
-            title: 'Login',
-            color: Color(0xffD1FAE5),
-            colortext: Color(0xff10B981),
+            title: Text('Login',
+            style: TextStyle(
+              color: const Color(0xff10B981),
+              fontSize: 20,
+            ),
+            ),
+            color: const Color(0xffD1FAE5),
             onTap: () {
               showModalBottomSheet(
                   backgroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(36),
                           topRight: Radius.circular(36))),
@@ -88,14 +99,13 @@ class SplashViewBody extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 24),
                         child: BlocProvider(
-                          create: (context) => LoginCubit(
-                            SplashRepoImplementation(),
-                          ),
+                          create: (context) => LoginCubit(SplashRepoImplementation(),),
                           child: LoginSheet(),
                         ),
                       ),
+                    ); 
+                    },
                     );
-                  });
             },
           ),
         ],
@@ -103,3 +113,4 @@ class SplashViewBody extends StatelessWidget {
     );
   }
 }
+
