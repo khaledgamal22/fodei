@@ -36,7 +36,9 @@ class _LoginFormState extends State<LoginForm> {
             header: 'Email Address',
             hint: 'Eg nameemail@emailkamue.com',
             onChanged: (data) {
-              email = data;
+              setState(() {
+                email = data;
+              });
             },
           ),
           SizedBox(
@@ -46,7 +48,9 @@ class _LoginFormState extends State<LoginForm> {
             header: 'Password',
             hint: '**** **** ****',
             onChanged: (data) {
-              password = data;
+              setState(() {
+                password = data;
+              });
             },
           ),
           SizedBox(
@@ -78,11 +82,15 @@ class _LoginFormState extends State<LoginForm> {
                 : Text(
                     'Login',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: (email == null || password == null)
+                          ? Color(0xff9CA3AF)
+                          : Colors.white,
                       fontSize: 20,
                     ),
                   ),
-            color: kPrimaryColor,
+            color: (email == null || password == null)
+                ? const Color(0xffF4F4F4)
+                : kPrimaryColor,
             onTap: () {
               if (formkey.currentState!.validate()) {
                 BlocProvider.of<LoginCubit>(context)

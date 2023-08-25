@@ -36,7 +36,9 @@ class _RegisterFormState extends State<RegisterForm> {
             header: 'Full Name',
             hint: 'Enter your full name',
             onChanged: (value) {
-              fullname = value;
+              setState(() {
+                fullname = value;
+              });
             },
           ),
           SizedBox(
@@ -46,7 +48,9 @@ class _RegisterFormState extends State<RegisterForm> {
             header: 'Email Address',
             hint: 'Eg nameemail@emailkamue.com',
             onChanged: (value) {
-              email = value;
+              setState(() {
+                email = value;
+              });
             },
           ),
           SizedBox(
@@ -56,7 +60,9 @@ class _RegisterFormState extends State<RegisterForm> {
             header: 'Password',
             hint: '**** **** ****',
             onChanged: (value) {
-              password = value;
+              setState(() {
+                password = value;
+              });
             },
           ),
           SizedBox(
@@ -81,11 +87,15 @@ class _RegisterFormState extends State<RegisterForm> {
                     : Text(
                         'Register',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: (email == null || password == null)
+                              ? Color(0xff9CA3AF)
+                              : Colors.white,
                           fontSize: 20,
                         ),
                       ),
-            color: kPrimaryColor,
+            color: (email == null || password == null)
+                ? const Color(0xffF4F4F4)
+                : kPrimaryColor,
           ),
           Divider(
             color: Colors.grey,

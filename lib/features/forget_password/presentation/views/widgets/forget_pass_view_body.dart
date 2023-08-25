@@ -63,10 +63,15 @@ class ForgetPassViewBody extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: CustomButton(
-                title: Text('Submit',style: TextStyle(
+              title: Text(
+                'Submit',
+                style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
-                ),), color: kPrimaryColor,),
+                ),
+              ),
+              color: kPrimaryColor,
+            ),
           )
         ],
       ),
