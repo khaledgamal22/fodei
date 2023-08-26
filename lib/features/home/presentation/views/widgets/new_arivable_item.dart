@@ -16,9 +16,9 @@ class NewArivableItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             boxShadow: <BoxShadow>[
               BoxShadow(
-                color: Colors.black.withOpacity(0.1),
-                spreadRadius: 3,
-                blurRadius: 5,
+                color: Colors.grey.withOpacity(0.1),
+                spreadRadius: 1,
+                blurRadius: 2,
               )
             ]),
         child: Padding(
@@ -86,3 +86,4 @@ class NewArivableItem extends StatelessWidget {
     );
   }
 }
+

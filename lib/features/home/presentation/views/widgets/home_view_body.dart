@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mataam_app/features/home/presentation/views/widgets/custom_appBar.dart';
-import 'package:mataam_app/features/home/presentation/views/widgets/new_arivable_item.dart';
+import 'package:mataam_app/features/home/presentation/views/widgets/new_arivable_list.dart';
 
 
 class HomeViewBody extends StatelessWidget {
@@ -10,17 +10,21 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.only(left: 24,),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomAppBar(),
+            SizedBox(height: 25,),
+            Padding(
+              padding: const EdgeInsets.only(right: 24),
+              child: CustomAppBar(),
+            ),
             SizedBox(
               height: 50,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.32,
-              child: NewArivableItem(),
+              child: NewArivableList(),
             )
           ],
         ),
