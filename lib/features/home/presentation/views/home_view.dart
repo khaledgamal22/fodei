@@ -30,28 +30,31 @@ class _HomeViewState extends State<HomeView> {
          });
         },
           backgroundColor: Color(0xffFFFFFF),
-          elevation: 10,
-          selectedItemColor: kPrimaryColor,
-          unselectedItemColor: Color(0xff4B5563),
+          elevation: 30,
+          selectedIconTheme: IconThemeData(
+            color: kPrimaryColor,
+            size: 24,
+          ),
+          unselectedIconTheme: IconThemeData(
+            color: Color(0xff4B5563),
+            size: 28,
+          ),
           items: [
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,
-                  size: 32,
                 ),
                 label: '',
                 ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.event_note,
-                size: 32,
               ),
               label: '',
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 FontAwesomeIcons.user,
-                size: 28,
               ),
               label: '',
             ),

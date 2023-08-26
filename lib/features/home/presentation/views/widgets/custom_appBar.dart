@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mataam_app/constant.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -9,10 +10,12 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       children: [
         Icon(FontAwesomeIcons.bars),
-        Icon(FontAwesomeIcons.locationDot),
-        Text('Agrabad 435, Chittagong'),
+        Spacer(),
+        Icon(FontAwesomeIcons.locationDot,size: 16,color: kPrimaryColor,),
+        Text('Santah, Tanta'),
+        Spacer(),
         CircleAvatar(
-          backgroundImage: AssetImage('assets/images/scholar.png'),
+          backgroundImage: AssetImage('assets/images/346780424_714371070489212_836219911072118910_n.jpg'),
         )
       ],
     );
