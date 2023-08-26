@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../constant.dart';
+import 'custom_image.dart';
 
 class NewArivableItem extends StatelessWidget {
   const NewArivableItem({super.key});
@@ -28,21 +29,10 @@ class NewArivableItem extends StatelessWidget {
             children: [
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.32 * 0.6,
-                child: AspectRatio(
-                  aspectRatio: 2.9 / 3,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(16),
-                        topRight: Radius.circular(16),
-                      ),
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/pasta-italiano.jpg'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ),
+                child: CustomImage(borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(16),
+            topRight: Radius.circular(16),
+          ),),
               ),
               SizedBox(
                 height: 3,
@@ -86,4 +76,5 @@ class NewArivableItem extends StatelessWidget {
     );
   }
 }
+
 

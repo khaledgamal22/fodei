@@ -43,6 +43,8 @@ class SplashViewBody extends StatelessWidget {
             height: 70,
           ),
           CustomButton(
+            width: 256,
+            height: 55,
             title: Text('Create Account',
             style: TextStyle(
               color: Colors.white,
@@ -78,6 +80,8 @@ class SplashViewBody extends StatelessWidget {
             height: 10,
           ),
           CustomButton(
+            width: 256,
+            height: 55,
             title: Text('Login',
             style: TextStyle(
               color: const Color(0xff10B981),

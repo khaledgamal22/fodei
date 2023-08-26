@@ -77,6 +77,8 @@ class _LoginFormState extends State<LoginForm> {
             height: 50,
           ),
           CustomButton(
+            width: 256,
+            height: 55,
             title: BlocProvider.of<LoginCubit>(context).state is LoginLoading
                 ? CustomCircularIndicator()
                 : Text(

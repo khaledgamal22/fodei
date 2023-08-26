@@ -69,6 +69,8 @@ class _RegisterFormState extends State<RegisterForm> {
             height: 50,
           ),
           CustomButton(
+            width: 256,
+            height: 55,
             onTap: () {
               if (formkey.currentState!.validate()) {
                 BlocProvider.of<RegisterCubit>(context).registerUser(
