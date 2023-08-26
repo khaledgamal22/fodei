@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mataam_app/features/home/presentation/views/widgets/custom_appBar.dart';
+import 'package:mataam_app/features/home/presentation/views/widgets/custom_search_textfield.dart';
 import 'package:mataam_app/features/home/presentation/views/widgets/new_arivable_list.dart';
 
 
@@ -16,8 +17,13 @@ class HomeViewBody extends StatelessWidget {
           children: [
             SizedBox(height: 25,),
             Padding(
-              padding: const EdgeInsets.only(right: 24),
+              padding: const EdgeInsets.only(right: 24,),
               child: CustomAppBar(),
+            ),
+            SizedBox(height: 20,),
+            Padding(
+              padding: const EdgeInsets.only(left: 8,right: 32,),
+              child: CustomSearchTextField(backgroundcolor: Color(0xffE6E7E9),),
             ),
             SizedBox(
               height: 50,
