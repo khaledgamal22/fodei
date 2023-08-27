@@ -22,8 +22,8 @@ class CustomGoolgeButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.network(
-              'http://pngimg.com/uploads/google/google_PNG19635.png',
+            Image.asset(
+              'assets/images/1534129544.png',
               height: 45,
               ),
             SizedBox(width: 15,),

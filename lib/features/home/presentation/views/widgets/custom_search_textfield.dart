@@ -8,10 +8,14 @@ class CustomSearchTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
+        constraints: BoxConstraints(
+          maxHeight: 45,
+          maxWidth: MediaQuery.of(context).size.width*0.73,
+        ),
         filled: true,
         fillColor: backgroundcolor,
         hintText: 'Search',
-        hintStyle: TextStyle(color: Color(0xff9CA3AF),),
+        hintStyle: TextStyle(color: Color(0xff9CA3AF),fontSize: 18,),
         prefixIcon: Icon(Icons.search,color: Color(0xff9CA3AF),),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(24),
