@@ -11,7 +11,10 @@ class RestaurantItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Color(0xffFFFFFF)),
+      decoration: BoxDecoration(
+        color: Color(0xffFFFFFF),
+        borderRadius: BorderRadius.circular(12),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: Row(
@@ -62,7 +65,9 @@ class RestaurantItem extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 3,),
+                  SizedBox(
+                    height: 3,
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Row(
@@ -72,9 +77,8 @@ class RestaurantItem extends StatelessWidget {
                           title: Text(
                             'Book',
                             style: TextStyle(
-                              color: Color(0xffFFFFFF),
-                              fontWeight: FontWeight.w600
-                            ),
+                                color: Color(0xffFFFFFF),
+                                fontWeight: FontWeight.w600),
                           ),
                           color: kPrimaryColor,
                           width: 100,

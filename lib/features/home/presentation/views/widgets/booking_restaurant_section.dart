@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mataam_app/features/home/presentation/views/widgets/restaurant_item.dart';
 
-import 'home_view_body.dart';
+import 'booking_retaurant_list.dart';
 
 class BookingRestaurantSection extends StatelessWidget {
   const BookingRestaurantSection({super.key});
@@ -11,7 +10,7 @@ class BookingRestaurantSection extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(right: 16),
+          padding: const EdgeInsets.only(right: 16,left: 24,),
           child: Row(
             children: [
               Column(
@@ -46,12 +45,18 @@ class BookingRestaurantSection extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 3,),
+        SizedBox(
+          height: 3,
+        ),
         Padding(
-          padding: const EdgeInsets.only(right: 10,),
-          child: RestaurantItem(),
+          padding: const EdgeInsets.only(
+            right: 10,
+          ),
+          child: BookingRestaurantList(),
         ),
       ],
     );
   }
 }
+
+
