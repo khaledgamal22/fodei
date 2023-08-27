@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mataam_app/features/home/presentation/views/widgets/location_widget.dart';
 
 import '../../../../../constant.dart';
 import 'custom_image.dart';
@@ -46,29 +47,9 @@ class NewArivableItem extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 3,
+                height: 6,
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Icon(
-                    FontAwesomeIcons.locationDot,
-                    size: 14,
-                    color: kPrimaryColor,
-                  ),
-                  SizedBox(
-                    width: 6,
-                  ),
-                  Expanded(
-                    child: Text(
-                      'Ambrosia Hotel & Restaurant',
-                      style: TextStyle(
-                        color: Color(0xff6B7280),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              LocationWidget(text: 'Ambrosia Hotel & Restaurant',crossAxisAlignment: CrossAxisAlignment.start,),
             ],
           ),
         ),
@@ -76,5 +57,3 @@ class NewArivableItem extends StatelessWidget {
     );
   }
 }
-
-

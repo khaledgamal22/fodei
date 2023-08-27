@@ -8,6 +8,7 @@ class NewArivableList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: BouncingScrollPhysics(),
       padding: EdgeInsets.zero,
       scrollDirection: Axis.horizontal,
       itemBuilder: (context,index){

@@ -4,6 +4,7 @@ import 'package:mataam_app/core/utilits/widgets/custom_button.dart';
 
 import '../../../../../constant.dart';
 import 'custom_image.dart';
+import 'location_widget.dart';
 
 class RestaurantItem extends StatelessWidget {
   const RestaurantItem({super.key});
@@ -44,27 +45,7 @@ class RestaurantItem extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Color(0xff1F2937)),
                   ),
-                  Row(
-                    children: [
-                      Icon(
-                        FontAwesomeIcons.locationDot,
-                        color: kPrimaryColor,
-                        size: 14,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Expanded(
-                        child: Text(
-                          'kazi Deriy, Taiger Pass Chittagong',
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Color(0xff6B7280),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  LocationWidget(text: 'Kazi Deriy, Taiger Pass Chittagong'),
                   SizedBox(
                     height: 3,
                   ),
@@ -96,3 +77,6 @@ class RestaurantItem extends StatelessWidget {
     );
   }
 }
+
+
+

@@ -13,54 +13,53 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  List<Widget> views=[HomeViewBody(),BookingView()];
+  List<Widget> views = [HomeViewBody(), BookingView()];
 
-  int selectedIndex=0;
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffF6F6F6),
-      body:views[selectedIndex],
+      body: views[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
-        onTap: (value){
-         setState(() {
-           selectedIndex=value;
-         });
+        onTap: (value) {
+          setState(() {
+            selectedIndex = value;
+          });
         },
-          backgroundColor: Color(0xffFFFFFF),
-          elevation: 30,
-          selectedIconTheme: IconThemeData(
-            color: kPrimaryColor,
-            size: 24,
-          ),
-          unselectedIconTheme: IconThemeData(
-            color: Color(0xff4B5563),
-            size: 28,
-          ),
-          items: [
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
-                ),
-                label: '',
-                ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.event_note,
-              ),
-              label: '',
+        backgroundColor: Color(0xffFFFFFF),
+        elevation: 30,
+        selectedIconTheme: IconThemeData(
+          color: kPrimaryColor,
+          size: 24,
+        ),
+        unselectedIconTheme: IconThemeData(
+          color: Color(0xff4B5563),
+          size: 28,
+        ),
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                FontAwesomeIcons.user,
-              ),
-              label: '',
-            ),
-          ],
+            label: '',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.event_note,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              FontAwesomeIcons.user,
+            ),
+            label: '',
+          ),
+        ],
+      ),
     );
   }
 }
-

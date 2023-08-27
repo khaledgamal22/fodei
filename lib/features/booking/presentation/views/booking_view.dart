@@ -6,6 +6,11 @@ class BookingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BookingViewBody();
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Color(0xffF6F6F6),
+        body: BookingViewBody(),
+      ),
+    );
   }
 }
