@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mataam_app/features/home/presentation/views/widgets/location_widget.dart';
-
-import '../../../../../constant.dart';
 import 'custom_image.dart';
 
 class NewArivableItem extends StatelessWidget {

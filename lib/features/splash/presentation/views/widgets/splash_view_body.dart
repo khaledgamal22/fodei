@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:mataam_app/constant.dart';
 import 'package:mataam_app/features/splash/data/repos/splash_repo_implementation.dart';
 import 'package:mataam_app/features/splash/presentation/view_models/login_cubit/login_cubit.dart';
@@ -8,9 +7,6 @@ import 'package:mataam_app/features/splash/presentation/view_models/register_cub
 import 'package:mataam_app/core/utilits/widgets/custom_button.dart';
 import 'package:mataam_app/features/splash/presentation/views/widgets/login_sheet.dart';
 import 'package:mataam_app/features/splash/presentation/views/widgets/register_sheet.dart';
-
-import '../../../../../core/utilits/app_routes.dart';
-import '../../../../../core/utilits/functions.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});

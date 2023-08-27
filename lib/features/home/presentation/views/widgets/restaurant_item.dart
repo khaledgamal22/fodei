@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mataam_app/core/utilits/widgets/custom_button.dart';
-
 import '../../../../../constant.dart';
 import 'custom_image.dart';
 import 'location_widget.dart';
