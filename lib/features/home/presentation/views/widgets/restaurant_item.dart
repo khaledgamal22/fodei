@@ -5,7 +5,9 @@ import 'custom_image.dart';
 import 'location_widget.dart';
 
 class RestaurantItem extends StatelessWidget {
-  const RestaurantItem({super.key});
+  const RestaurantItem({super.key, required this.titleButton});
+
+  final String titleButton;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +56,7 @@ class RestaurantItem extends StatelessWidget {
                       children: [
                         CustomButton(
                           title: Text(
-                            'Book',
+                            titleButton,
                             style: TextStyle(
                                 color: Color(0xffFFFFFF),
                                 fontWeight: FontWeight.w600),

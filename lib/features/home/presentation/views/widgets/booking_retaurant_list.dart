@@ -14,7 +14,7 @@ class BookingRestaurantList extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 8),
-          child: RestaurantItem(),
+          child: RestaurantItem(titleButton: 'Book',),
         );
       },
     );
