@@ -10,11 +10,11 @@ class BookingViewBody extends StatelessWidget {
     return CustomScrollView(
       slivers: [
        const SliverAppBar(
-          toolbarHeight: 90,
+          toolbarHeight: 80,
           title: Text('Booking History'),
           centerTitle: true,
           automaticallyImplyLeading: false,
-          collapsedHeight: 90,
+          collapsedHeight: 80,
           pinned: true,
           backgroundColor: kPrimaryColor,
           shape: RoundedRectangleBorder(

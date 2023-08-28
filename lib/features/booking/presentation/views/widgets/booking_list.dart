@@ -11,7 +11,7 @@ class BookingViewList extends StatelessWidget {
       padding: EdgeInsets.zero,
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
-      itemCount: 10,
+      itemCount: 3,
       itemBuilder: ((context, index) {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 8,),
