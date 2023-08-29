@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mataam_app/constant.dart';
+import 'package:mataam_app/core/utilits/app_routes.dart';
 import 'package:mataam_app/core/utilits/widgets/custom_button.dart';
 import 'package:mataam_app/core/utilits/widgets/custom_textfeild.dart';
 
@@ -73,6 +74,9 @@ class ForgetPassViewBody extends StatelessWidget {
                 ),
               ),
               color: kPrimaryColor,
+              onTap: () {
+                GoRouter.of(context).push(AppRoute.kChangepass);
+              },
             ),
           )
         ],

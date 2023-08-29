@@ -18,7 +18,7 @@ class ChangePassViewBody extends StatelessWidget {
             height: 50,
           ),
           Text(
-            'change New Password',
+            'Change New Password',
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           SizedBox(

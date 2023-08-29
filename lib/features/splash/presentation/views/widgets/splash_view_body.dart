@@ -18,8 +18,8 @@ class SplashViewBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/images/food-app-icon-12.jpg',
-            height: MediaQuery.of(context).size.height * 0.25,
+            'assets/images/logo.png',
+            height: MediaQuery.of(context).size.height * 0.3,
           ),
           SizedBox(
             height: 50,
