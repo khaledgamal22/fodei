@@ -25,7 +25,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
       padding: const EdgeInsets.only(bottom: 80,),
       child: PageView(
         controller: controller,
-        physics: isLast?NeverScrollableScrollPhysics():ClampingScrollPhysics(),
+        physics: isLast?const NeverScrollableScrollPhysics():const BouncingScrollPhysics(),
         onPageChanged: (value) {
           setState(() {
             if(value==2){
@@ -59,7 +59,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomButton(
-                    title: Text('Get Started',style: TextStyle(color: Color(0xffFFFFFF),fontSize: 20,fontWeight: FontWeight.w600,),),
+                    title: const Text('Get Started',style: TextStyle(color: Color(0xffFFFFFF),fontSize: 20,fontWeight: FontWeight.w600,),),
                     color: kPrimaryColor,
                     width: 256,
                     height: 55,
@@ -76,7 +76,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     onPressed: () {
                       controller.jumpToPage(2);
                     },
-                    child: Text(
+                    child: const Text(
                       'Skip',
                       style: TextStyle(
                         color: Color(0xff4B5563),
@@ -87,14 +87,14 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   SmoothPageIndicator(
                     controller: controller,
                     count: 3,
-                    effect: WormEffect(
+                    effect: const WormEffect(
                       activeDotColor: kPrimaryColor,
                       spacing: 16,
                     ),
                     onDotClicked: (index) {
                       controller.animateToPage(
                         index,
-                        duration: Duration(
+                        duration: const Duration(
                           microseconds: 500,
                         ),
                         curve: Curves.elasticInOut,
@@ -104,14 +104,14 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   IconButton(
                       onPressed: () {
                         controller.nextPage(
-                          duration: Duration(
+                          duration: const Duration(
                             microseconds: 500,
                           ),
                           curve: Curves.easeInOut,
                         );
                         
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         FontAwesomeIcons.arrowRight,
                         size: 20,
                         color: kPrimaryColor,

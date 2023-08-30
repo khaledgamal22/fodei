@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mataam_app/constant.dart';
 import 'package:mataam_app/features/booking/presentation/views/widgets/booking_view_body.dart';
 
 class BookingView extends StatelessWidget {
@@ -8,7 +9,7 @@ class BookingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffF6F6F6),
+        backgroundColor: kScaffoldbackcolor,
         body: BookingViewBody(),
       ),
     );

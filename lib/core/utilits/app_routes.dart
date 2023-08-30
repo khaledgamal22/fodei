@@ -3,6 +3,7 @@ import 'package:mataam_app/features/booking/presentation/views/booking_view.dart
 import 'package:mataam_app/features/forget_password/presentation/views/change_pass_view.dart';
 import 'package:mataam_app/features/forget_password/presentation/views/forget_pass_view.dart';
 import 'package:mataam_app/features/home/presentation/views/home_view.dart';
+import 'package:mataam_app/features/home/presentation/views/restaurant_details_view.dart';
 import 'package:mataam_app/features/splash/presentation/views/onboarding_view.dart';
 import 'package:mataam_app/features/splash/presentation/views/splash_view.dart';
 
@@ -13,6 +14,7 @@ abstract class AppRoute {
   static const kChangepass='/changepass';
   static const kBooking='/Bokking';
   static const konBoarding='/';
+  static const kRestaurantDetails='/RestaurantDetails';
   static final router = GoRouter(routes: [
     GoRoute(
       path: kSplashId,
@@ -37,6 +39,10 @@ abstract class AppRoute {
     GoRoute(
       path: konBoarding,
       builder: (context, state) => OnBoardingView(),
+    ),
+    GoRoute(
+      path: kRestaurantDetails,
+      builder: (context, state) => RestaurantDetailsView(),
     ),
   ]);
 }

@@ -41,7 +41,7 @@ class _RegisterFormState extends State<RegisterForm> {
               });
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           CustomTextFeild(
@@ -53,7 +53,7 @@ class _RegisterFormState extends State<RegisterForm> {
               });
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           CustomTextFeild(
@@ -65,7 +65,7 @@ class _RegisterFormState extends State<RegisterForm> {
               });
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           CustomButton(
@@ -85,12 +85,12 @@ class _RegisterFormState extends State<RegisterForm> {
             },
             title:
                 BlocProvider.of<RegisterCubit>(context).state is RegisterLoading
-                    ? CustomCircularIndicator()
+                    ? const CustomCircularIndicator()
                     : Text(
                         'Register',
                         style: TextStyle(
                           color: (email == null || password == null)
-                              ? Color(0xff9CA3AF)
+                              ? const Color(0xff9CA3AF)
                               : Colors.white,
                           fontSize: 20,
                         ),
@@ -99,7 +99,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 ? const Color(0xffF4F4F4)
                 : kPrimaryColor,
           ),
-          Divider(
+          const Divider(
             color: Colors.grey,
             indent: 70,
             endIndent: 70,
@@ -110,7 +110,7 @@ class _RegisterFormState extends State<RegisterForm> {
             color: Colors.grey.withOpacity(0.2),
             colortext: Colors.black,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           )
         ],

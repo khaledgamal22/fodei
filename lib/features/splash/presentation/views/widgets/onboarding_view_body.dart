@@ -12,7 +12,7 @@ class OnBoardingViewBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 80,),
       child: PageView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: const [
           OnboardPageItem(

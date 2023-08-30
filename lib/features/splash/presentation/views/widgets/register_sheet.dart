@@ -8,7 +8,7 @@ import '../../../../../core/utilits/app_routes.dart';
 import '../../../../../core/utilits/functions.dart';
 
 class RegisterSheet extends StatelessWidget {
-  RegisterSheet({super.key});
+  const RegisterSheet({super.key});
 
   @override
   Widget build(BuildContext context) {

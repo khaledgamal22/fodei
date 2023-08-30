@@ -18,6 +18,8 @@ class MataamApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: ThemeData(
+      ),
       debugShowCheckedModeBanner: false,
      routerConfig: AppRoute.router,
     );

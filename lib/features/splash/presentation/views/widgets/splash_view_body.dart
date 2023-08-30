@@ -21,27 +21,27 @@ class SplashViewBody extends StatelessWidget {
             'assets/images/logo.png',
             height: MediaQuery.of(context).size.height * 0.3,
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
-          Text(
+          const Text(
             'Welcome',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Text(
+          const Text(
             'By enjoying Foodmedia Services',
           ),
-          Text('Please Register first'),
-          SizedBox(
+          const Text('Please Register first'),
+          const SizedBox(
             height: 70,
           ),
           CustomButton(
             width: 256,
             height: 55,
-            title: Text('Create Account',
+            title: const Text('Create Account',
             style: TextStyle(
               color: Colors.white,
               fontSize: 20,
@@ -51,7 +51,7 @@ class SplashViewBody extends StatelessWidget {
             onTap: () {
               showModalBottomSheet(
                   backgroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(36),
                           topRight: Radius.circular(36))),
@@ -72,15 +72,15 @@ class SplashViewBody extends StatelessWidget {
                   });
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           CustomButton(
             width: 256,
             height: 55,
-            title: Text('Login',
+            title: const Text('Login',
             style: TextStyle(
-              color: const Color(0xff10B981),
+              color: Color(0xff10B981),
               fontSize: 20,
             ),
             ),
@@ -100,7 +100,7 @@ class SplashViewBody extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(vertical: 24),
                         child: BlocProvider(
                           create: (context) => LoginCubit(SplashRepoImplementation(),),
-                          child: LoginSheet(),
+                          child: const LoginSheet(),
                         ),
                       ),
                     ); 

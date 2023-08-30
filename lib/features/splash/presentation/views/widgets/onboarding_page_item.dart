@@ -15,14 +15,14 @@ class OnboardPageItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(height: 70,),
+          const SizedBox(height: 70,),
           Image.asset(
             image,
             height: MediaQuery.of(context).size.height * 0.45,
           ),
-          Text(title,textAlign: TextAlign.center,style: TextStyle(fontSize: 32,fontWeight: FontWeight.w500,),),
-          SizedBox(height: 25,),
-          Text(subTitle,textAlign: TextAlign.center,style: TextStyle(color: Color(0xff4B5563),fontSize: 15,),),
+          Text(title,textAlign: TextAlign.center,style: const TextStyle(fontSize: 32,fontWeight: FontWeight.w500,),),
+          const SizedBox(height: 25,),
+          Text(subTitle,textAlign: TextAlign.center,style: const TextStyle(color: Color(0xff4B5563),fontSize: 15,),),
         ],
       ),
     );

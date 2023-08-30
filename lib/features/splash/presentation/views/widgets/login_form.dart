@@ -11,7 +11,7 @@ import 'custom_google_button.dart';
 import '../../../../../core/utilits/widgets/custom_textfeild.dart';
 
 class LoginForm extends StatefulWidget {
-  LoginForm({super.key});
+  const LoginForm({super.key});
 
   @override
   State<LoginForm> createState() => _LoginFormState();
@@ -41,7 +41,7 @@ class _LoginFormState extends State<LoginForm> {
               });
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           CustomTextFeild(
@@ -53,7 +53,7 @@ class _LoginFormState extends State<LoginForm> {
               });
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Row(
@@ -63,7 +63,7 @@ class _LoginFormState extends State<LoginForm> {
                 onTap: () {
                   GoRouter.of(context).push(AppRoute.kForgetpass);
                 },
-                child: Text(
+                child: const Text(
                   'Forget Password?',
                   style: TextStyle(
                     color: kPrimaryColor,
@@ -73,19 +73,19 @@ class _LoginFormState extends State<LoginForm> {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           CustomButton(
             width: 256,
             height: 55,
             title: BlocProvider.of<LoginCubit>(context).state is LoginLoading
-                ? CustomCircularIndicator()
+                ? const CustomCircularIndicator()
                 : Text(
                     'Login',
                     style: TextStyle(
                       color: (email == null || password == null)
-                          ? Color(0xff9CA3AF)
+                          ? const Color(0xff9CA3AF)
                           : Colors.white,
                       fontSize: 20,
                     ),
@@ -103,7 +103,7 @@ class _LoginFormState extends State<LoginForm> {
               setState(() {});
             },
           ),
-          Divider(
+          const Divider(
             color: Colors.grey,
             indent: 70,
             endIndent: 70,
@@ -114,7 +114,7 @@ class _LoginFormState extends State<LoginForm> {
             color: Colors.grey.withOpacity(0.2),
             colortext: Colors.black,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           )
         ],

@@ -6,31 +6,32 @@ import 'package:mataam_app/features/booking/presentation/views/booking_view.dart
 import 'package:mataam_app/features/home/presentation/views/widgets/home_view_body.dart';
 
 class HomeView extends StatefulWidget {
-  HomeView({super.key});
+ const HomeView({super.key});
 
   @override
   State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
-  List<Widget> views = [HomeViewBody(), BookingView()];
+  List<Widget> views = [const HomeViewBody(),const BookingView()];
 
   int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF6F6F6),
+      backgroundColor: kScaffoldbackcolor,
       body: views[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
+        
         onTap: (value) {
           setState(() {
             selectedIndex = value;
           });
         },
         backgroundColor: Color(0xffFFFFFF),
-        elevation: 30,
+        elevation: 20,
         selectedIconTheme: IconThemeData(
           color: kPrimaryColor,
           size: 24,
