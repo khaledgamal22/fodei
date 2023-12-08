@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mataam_app/features/home/data/repos/home_repo_impl.dart';
+import 'package:mataam_app/features/home/presentation/view_models/booking_restaurants_cubit/booking_restaurants_cubit.dart';
 
 import 'booking_retaurant_list.dart';
 
@@ -52,7 +55,9 @@ class BookingRestaurantSection extends StatelessWidget {
           padding: const EdgeInsets.only(
             right: 10,
           ),
-          child: BookingRestaurantList(),
+          child: BlocProvider(
+            create: (context) => BookingRestaurantsCubit(HomeRepoImpl()),
+          child: BookingRestaurantList()),
         ),
       ],
     );

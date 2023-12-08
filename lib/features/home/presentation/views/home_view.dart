@@ -13,7 +13,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  List<Widget> views = [const HomeViewBody(),const BookingView()];
+  List<Widget> views = [const HomeViewBody(),const BookingView(),];
 
   int selectedIndex = 0;
 

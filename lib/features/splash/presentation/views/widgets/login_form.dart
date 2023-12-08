@@ -12,7 +12,6 @@ import '../../../../../core/utilits/widgets/custom_textfeild.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
-
   @override
   State<LoginForm> createState() => _LoginFormState();
 }
@@ -110,6 +109,9 @@ class _LoginFormState extends State<LoginForm> {
             height: 30,
           ),
           CustomGoolgeButton(
+            onTap: () {
+              BlocProvider.of<LoginCubit>(context).loginUserWithGoogle();
+            },
             title: 'Login with Google',
             color: Colors.grey.withOpacity(0.2),
             colortext: Colors.black,
